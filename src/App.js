@@ -6,13 +6,17 @@ const App = () => (
   <div className="App">
     <header className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
-      <p>
-        Edit <code>src/App.js</code> and save to reload.
-      </p>
-      <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-        Learn React LoLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      <a
+        className="App-link"
+        href="https://reactjs.org"
+        target="_blank"
+        rel="noopener noreferrer"
+        alt="Janko"
+      >
+        kkErat diam diam ipsum kasd sit dolore no est, lorem ipsum sit et et. Est kasd sadipscing
+        est voluptua sed erat erat. Sea elitr dolores et duo stet accusam tempor, eirmod at takimata
+        magna sit ipsum consetetur, sanctus ipsum sit dolores lorem. Takimata takimata tempor et
+        elitr duo gubergren sadipscing..
       </a>
     </header>
   </div>
