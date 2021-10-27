@@ -1,25 +1,17 @@
 {
-  "extends": ["airbnb", "prettier", "prettier/react"],
-  "env": {
-    "jest": true
-  },
-  "globals": {
-    "document": true
-  },
+  "extends": [
+    "airbnb",
+    "prettier",
+    "prettier/react"
+  ],
   "rules": {
     "react/jsx-filename-extension": [
       1,
       {
-        "extensions": [".js"]
+        "extensions": [
+          ".js"
+        ]
       }
     ]
-  },
-  "settings": {
-    "import/resolver": {
-      "node": {
-        "paths": ["src"],
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
-      }
-    }
   }
 }
