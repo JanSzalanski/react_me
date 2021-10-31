@@ -2,8 +2,8 @@ import styled, { css } from 'styled-components';
 
 const Button = styled.button`
   padding: 0;
-  background-color: ${({ color }) => color || '#2bd8ff'}; //#2bffd8,#ff2bd8,#d82bff;
-  width: ${({ width }) => width || '220px'};
+  background-color: ${({ theme }) => theme.primary};
+  width: 220px;
   height: 47px;
   border: none;
   border-radius: 50px;
@@ -23,3 +23,4 @@ const Button = styled.button`
 `;
 
 export default Button;
+// background-color: ${({ color }) => color || '#2bd8ff'}; //#2bffd8,#ff2bd8,#d82bff;
