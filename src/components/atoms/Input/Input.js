@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import magIcon from 'assets/magnifier.svg';
+import magIcon from 'assets/icons/magnifier.svg';
 
 const Input = styled.input`
   padding: 15px 30px;
