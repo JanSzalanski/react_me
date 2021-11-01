@@ -9,9 +9,9 @@ storiesOf('Button', module)
   .add('Primary', () => {
     const label = 'Colors';
     const options = {
-      primary: '#2bd8ff',
-      secondary: '#ff2bd8',
-      tertiary: '#ffd82b',
+      Primary: '#2bd8ff',
+      Secondary: '#ff2bd8',
+      Tertiary: '#ffd82b',
     };
     const defaultValue = '#2bd8ff';
     const groupId = 'GROUP-ID1';
