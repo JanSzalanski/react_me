@@ -4,4 +4,4 @@ import Heading from './Heading';
 
 storiesOf('Heading', module)
   .add('Normal', () => <Heading>Hello World</Heading>)
-  .add('big', () => <Heading big>Hello World</Heading>);
+  .add('Big', () => <Heading big>Hello World</Heading>);

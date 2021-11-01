@@ -1,9 +1,10 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import magIcon from 'assets/magnifier.svg';
 
 const Input = styled.input`
   padding: 15px 30px;
-  font-size: ${({ theme }) => theme.fontSize.s};
-  font-weight: ${({ theme }) => theme.regular};
+  font-size: ${({ theme }) => theme.fontSize.xs};
+  font-weight: ${({ theme }) => theme.bold};
   background-color: ${({ theme }) => theme.grey100};
   border: none;
   border-radius: 50px;
@@ -11,8 +12,21 @@ const Input = styled.input`
   ::placeholder {
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: ${({ theme }) => theme.grey300};
+    color: ${({ theme }) => theme.grey400};
   }
+
+  ${({ search }) =>
+    search &&
+    css`
+      padding: 10px 20px 10px 40px;
+      background-image: url(${magIcon});
+      background-size: 15px;
+      background-position: 15px 50%;
+      background-repeat: no-repeat;
+      ::placeholder {
+        letter-spacing: 0px;
+      }
+    `}
 `;
 
 export default Input;
