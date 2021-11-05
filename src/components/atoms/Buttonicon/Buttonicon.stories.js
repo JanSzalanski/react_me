@@ -5,7 +5,7 @@ import bulbIcon from 'assets/icons/bulb.svg';
 import logoutIcon from 'assets/icons/logout.svg';
 import penIcon from 'assets/icons/pen.svg';
 import plusIcon from 'assets/icons/plus.svg';
-import twitterIcon from 'assets/icons/twitter.svg';
+import peopleIcon from 'assets/icons/people.svg';
 // eslint-disable-next-line import/no-unresolved
 import ButtonIcon from './ButtonIcon';
 
@@ -23,4 +23,4 @@ storiesOf('Atoms/ButtonIcon', module)
   .add('Logout', () => <ButtonIcon active icon={logoutIcon} />)
   .add('Pen', () => <ButtonIcon active icon={penIcon} />)
   .add('Plus', () => <ButtonIcon active icon={plusIcon} />)
-  .add('Twitter', () => <ButtonIcon active icon={twitterIcon} />);
+  .add('People', () => <ButtonIcon active icon={peopleIcon} />);

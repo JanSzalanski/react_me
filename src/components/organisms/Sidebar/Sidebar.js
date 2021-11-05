@@ -6,7 +6,7 @@ import ButtonIcon from 'components/atoms/ButtonIcon/ButtonIcon';
 import bulbIcon from 'assets/icons/bulb.svg';
 import logoutIcon from 'assets/icons/logout.svg';
 import penIcon from 'assets/icons/pen.svg';
-import twitterIcon from 'assets/icons/twitter.svg';
+import peopleIcon from 'assets/icons/people.svg';
 import logoIcon from 'assets/icons/logo.svg';
 
 const StyledWrapper = styled.nav`
@@ -25,18 +25,24 @@ const StyledWrapper = styled.nav`
 
 const StyledLogoLink = styled(NavLink)`
   display: block;
-  width: 67px;
-  height: 67px;
+  width: 74px;
+  height: 74px;
   background-image: url(${logoIcon});
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: 80%;
+  background-size: 100%;
   border: none;
   margin-bottom: 10vh;
 `;
 
 const StyledLogoutButton = styled(ButtonIcon)`
+  display: block;
+  width: 74px;
+  height: 74px;
   margin-top: auto;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  /* background-size: 100%; */
 `;
 
 const StyledLinksList = styled.ul`
@@ -53,7 +59,7 @@ const Sidebar = ({ pageType }) => (
         <ButtonIcon exact as={NavLink} to="/" icon={penIcon} activeclass="active" />
       </li>
       <li>
-        <ButtonIcon as={NavLink} to="/twitters" icon={twitterIcon} activeclass="active" />
+        <ButtonIcon as={NavLink} to="/people" icon={peopleIcon} activeclass="active" secondary />
       </li>
       <li>
         <ButtonIcon as={NavLink} to="/articles" icon={bulbIcon} activeclass="active" />

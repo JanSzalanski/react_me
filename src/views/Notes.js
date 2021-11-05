@@ -1,9 +1,14 @@
 import React from 'react';
+import styled from 'styled-components';
 import PageTemplate from 'templates/PageTemplate';
+
+const Head = styled.h1`
+  color: ${({ theme }) => theme.white};
+`;
 
 const Notes = () => (
   <PageTemplate>
-    <h1>Notes view</h1>
+    <Head>O Projekcie</Head>
   </PageTemplate>
 );
 

@@ -6,10 +6,10 @@ const Head = styled.h1`
   color: ${({ theme }) => theme.white};
 `;
 
-const Articles = () => (
-  <PageTemplate pageType="article">
-    <Head>Artykuły</Head>
+const People = () => (
+  <PageTemplate pageType="people">
+    <Head>Ludzie</Head>
   </PageTemplate>
 );
 
-export default Articles;
+export default People;

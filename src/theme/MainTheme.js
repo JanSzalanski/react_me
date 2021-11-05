@@ -1,7 +1,8 @@
 export const theme = {
   note: '#2bd8ff',
-  twitter: '#ff2bd8',
+  people: '#ff2bd8',
   article: '#ffd82b',
+  maingrey: '#373737',
   grey100: 'hsl(0,0%,96%)',
   grey200: 'hsl(0,0%,90%)',
   grey300: 'hsl(0, 0%, 70%)',

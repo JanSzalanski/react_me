@@ -17,6 +17,7 @@ const GlobalStyle = createGlobalStyle`
     padding-left: 150px;
     font-size: 1.6rem;
     font-family: "Montserrat", sans-serif;
+    background-color: #373737 ;
   }
 `;
 

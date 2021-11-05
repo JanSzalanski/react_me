@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Notes from 'views/Notes';
 import Articles from 'views/Articles';
-import Twitters from 'views/Twitters';
+import People from 'views/People';
 import MainTemplate from '../templates/MainTemplate';
 
 const Root = () => (
@@ -11,7 +11,7 @@ const Root = () => (
       <Switch>
         <Route exact path="/" component={Notes} />
         <Route path="/articles" component={Articles} />
-        <Route path="/twitters" component={Twitters} />
+        <Route path="/people" component={People} />
       </Switch>
     </MainTemplate>
   </BrowserRouter>
