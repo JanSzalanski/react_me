@@ -4,6 +4,7 @@ import PageTemplate from 'templates/PageTemplate';
 
 const Head = styled.h1`
   color: ${({ theme }) => theme.white};
+  padding: 25px 0;
 `;
 
 const People = () => (

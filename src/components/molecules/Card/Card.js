@@ -8,18 +8,21 @@ import Image from 'assets/img/img.jpg';
 import LinkIcon from 'assets/icons/link.svg';
 
 const StyledWrapper = styled.div`
+  margin-top: 25px;
   min-height: 380px;
-  box-shadow: 0 10px 30px -10px hsla(0, 0%, 0%, 0.1);
+  box-shadow: 0 10px 30px -10px hsla(0, 0%, 0%, 0.5);
   border-radius: 8px;
   overflow: hidden;
   display: grid;
   grid-template-rows: 0.25fr 1fr;
+  border: 1px solid rgba(0, 0, 0, 0.3);
 `;
 
 const InnerWrapper = styled.div`
   position: relative;
   padding: 17px 30px;
-  background-color: ${({ activeColor, theme }) => (activeColor ? theme[activeColor] : 'white')};
+  background-color: ${({ activeColor, theme }) =>
+    activeColor ? theme[activeColor] : theme.maingrey};
 
   :first-of-type {
     z-index: 1;
@@ -41,14 +44,19 @@ const DateInfo = styled(Paragraph)`
   font-size: ${({ theme }) => theme.fontSize.xs};
 `;
 
+const ParagraphCard = styled(Paragraph)`
+  color: white;
+`;
+
 const StyledHeading = styled(Heading)`
   margin: 5px 0 0;
+  color: black;
 `;
 
 const StyledAvatar = styled.img`
   width: 86px;
   height: 86px;
-  border: 4px solid ${({ theme }) => theme.twitter};
+  border: 7px solid ${({ theme }) => theme.maingrey};
   position: absolute;
   right: 20px;
   top: 20px;
@@ -59,6 +67,7 @@ const StyledLinkButton = styled.a`
   display: block;
   width: 47px;
   height: 47px;
+  border: 3px solid #373737;
   border-radius: 50%;
   background: white url(${LinkIcon}) no-repeat;
   background-size: 60%;
@@ -74,22 +83,24 @@ const Card = ({ cardType }) => (
     <InnerWrapper activeColor={cardType}>
       <StyledHeading>Hello react!</StyledHeading>
       <DateInfo>3 days</DateInfo>
-      {cardType === 'twitter' && <StyledAvatar src={Image} />}
+      {cardType === 'people' && <StyledAvatar src={Image} />}
       {cardType === 'article' && <StyledLinkButton href="https://szalanski.eu/prywatnie" />}
     </InnerWrapper>
     <InnerWrapper flex>
-      <Paragraph>
+      <ParagraphCard>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti error enim corporis
         tempora praesentium dicta sequi quis hic eligendi illum in, officiis culpa quia fugit
-        molestias? Itaque doloribus praesentium fugiat!
-      </Paragraph>
+        molestias? Itaque doloribus praesentium fugiat! Lorem ipsum, dolor sit amet consectetur
+        adipisicing elit. Corrupti error enim corporis tempora praesentium dicta sequi quis hic
+        eligendi illum in, officiis culpa quia fugit molestias? Itaque doloribus praesentium fugiat!
+      </ParagraphCard>
       <Button secondary>Remove</Button>
     </InnerWrapper>
   </StyledWrapper>
 );
 
 Card.propTypes = {
-  cardType: PropTypes.oneOf(['note', 'twitter', 'article']),
+  cardType: PropTypes.oneOf(['note', 'people', 'article']),
 };
 
 Card.defaultProps = {
