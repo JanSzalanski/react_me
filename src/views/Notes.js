@@ -8,6 +8,7 @@ import Paragraph from '../components/atoms/Paragraph/Paragraph';
 
 const StyledPageHeader = styled.h1`
   display: block;
+  position: relative;
   color: ${({ theme }) => theme.white};
   padding: 25px 0;
 `;
@@ -19,15 +20,25 @@ const StyledGridWrapper = styled.div`
   grid-gap: 50px;
 `;
 
+const StyledInput = styled(Input)`
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  :checked {
+    outline: 1px solid red;
+  }
+`;
+
 const Notes = () => (
   <PageTemplate>
     <StyledPageHeader>
-      <Heading placeholder="search" search>
-        {' '}
-        O Projekcie
+      <Heading big as="h1">
+        O projekcie
       </Heading>
       <Paragraph>6 notes</Paragraph>
-      <Input search placeholder="search" />
+      <StyledInput search placeholder="search" />
     </StyledPageHeader>
     <StyledGridWrapper>
       <Card cardType="note" />

@@ -23,6 +23,7 @@ const InnerWrapper = styled.div`
   padding: 17px 30px;
   background-color: ${({ activeColor, theme }) =>
     activeColor ? theme[activeColor] : theme.maingrey};
+  border-bottom: 2px solid theme[activeColor + 'Dark' ];
 
   :first-of-type {
     z-index: 1;
@@ -35,6 +36,7 @@ const InnerWrapper = styled.div`
       flex-direction: column;
       justify-content: space-between;
       height: 100%;
+      border-bottom: none;
     `}
 `;
 

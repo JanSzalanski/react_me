@@ -8,11 +8,21 @@ const Input = styled.input`
   background-color: ${({ theme }) => theme.grey100};
   border: none;
   border-radius: 50px;
+  appearance: none;
 
   ::placeholder {
     text-transform: uppercase;
     letter-spacing: 1px;
     color: ${({ theme }) => theme.grey400};
+  }
+
+  :enabled {
+    border: 2px solid ${({ theme }) => theme.note};
+    outline: none;
+  }
+  :checked {
+    background-color: ${({ theme }) => theme.white};
+    outline: none;
   }
 
   ${({ search }) =>
