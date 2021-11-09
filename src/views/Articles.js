@@ -23,7 +23,7 @@ const StyledGridWrapper = styled.div`
 
 const StyledInput = styled(Input)`
   position: absolute;
-  right: 25px;
+  right: 100px;
   top: 50%;
   transform: translateY(-50%);
 `;
@@ -35,7 +35,7 @@ const Articles = () => (
         Artykuły
       </Heading>
       <Paragraph>6 notes</Paragraph>
-      <StyledInput activeColor="article" search placeholder="search" />
+      <StyledInput required activeColor="article" search placeholder="search" />
     </StyledPageHeader>
     <StyledGridWrapper>
       <Card cardType="article" />

@@ -23,7 +23,8 @@ const InnerWrapper = styled.div`
   padding: 17px 30px;
   background-color: ${({ activeColor, theme }) =>
     activeColor ? theme[activeColor] : theme.maingrey};
-  border-bottom: 2px solid theme[activeColor + 'Dark' ];
+  border-bottom: 2px solid
+    ${({ activeColor, theme }) => (activeColor ? theme[`${activeColor}Dark`] : theme.note)};
 
   :first-of-type {
     z-index: 1;

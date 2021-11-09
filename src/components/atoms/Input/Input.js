@@ -10,6 +10,7 @@ const Input = styled.input`
   border: none;
   border-radius: 50px;
   appearance: none;
+  outline: none;
 
   ::placeholder {
     text-transform: uppercase;
@@ -22,8 +23,10 @@ const Input = styled.input`
     /* outline:  */
   }
   :checked {
-    background-color: ${({ theme }) => theme.white};
     outline: none;
+  }
+  :valid {
+    background-color: ${({ theme }) => theme.white};
   }
 
   ${({ search }) =>
