@@ -34,7 +34,7 @@ const People = () => (
         Ludzie
       </Heading>
       <Paragraph>6 notes</Paragraph>
-      <StyledInput search placeholder="search" />
+      <StyledInput activeColor="people" search placeholder="search" />
     </StyledPageHeader>
     <StyledGridWrapper>
       <Card cardType="people" />

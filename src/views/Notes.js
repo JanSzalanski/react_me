@@ -25,20 +25,16 @@ const StyledInput = styled(Input)`
   right: 25px;
   top: 50%;
   transform: translateY(-50%);
-
-  :checked {
-    outline: 1px solid red;
-  }
 `;
 
 const Notes = () => (
-  <PageTemplate>
+  <PageTemplate pageType="note">
     <StyledPageHeader>
       <Heading big as="h1">
         O projekcie
       </Heading>
       <Paragraph>6 notes</Paragraph>
-      <StyledInput search placeholder="search" />
+      <StyledInput activeColor="note" search placeholder="search" />
     </StyledPageHeader>
     <StyledGridWrapper>
       <Card cardType="note" />

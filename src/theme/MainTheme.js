@@ -12,6 +12,7 @@ export const theme = {
   grey400: 'hsl(0, 0%, 30%)',
   black: 'hsl(0, 0%, 0%)',
   white: 'hsl(255,100%,100%)',
+  red: 'rgb(0,255,0)',
   light: 300,
   bold: 600,
   fontSize: {

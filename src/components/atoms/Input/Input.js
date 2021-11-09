@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+
 import magIcon from 'assets/icons/magnifier.svg';
 
 const Input = styled.input`
@@ -17,8 +18,8 @@ const Input = styled.input`
   }
 
   :enabled {
-    border: 2px solid ${({ theme }) => theme.note};
-    outline: none;
+    border: 2px solid ${({ activeColor, theme }) => (activeColor ? theme[activeColor] : theme.note)};
+    /* outline:  */
   }
   :checked {
     background-color: ${({ theme }) => theme.white};

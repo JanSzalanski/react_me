@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+// import PropTypes from 'prop-types';
 import PageTemplate from 'templates/PageTemplate';
 import Card from 'components/molecules/Card/Card';
 import Input from 'components/atoms/Input/Input';
@@ -34,7 +35,7 @@ const Articles = () => (
         Artykuły
       </Heading>
       <Paragraph>6 notes</Paragraph>
-      <StyledInput search placeholder="search" />
+      <StyledInput activeColor="article" search placeholder="search" />
     </StyledPageHeader>
     <StyledGridWrapper>
       <Card cardType="article" />
