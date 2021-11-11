@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Paragraph from 'components/atoms/Paragraph/Paragraph';
 import Heading from 'components/atoms/Heading/Heading';
 import Button from 'components/atoms/Button/Button';
-import Image from 'assets/img/img.jpg';
+// import Image from 'assets/img/img.jpg';
 import LinkIcon from 'assets/icons/link.svg';
 
 const StyledWrapper = styled.div`
@@ -81,22 +81,16 @@ const StyledLinkButton = styled.a`
   transform: translateY(-50%);
 `;
 
-const Card = ({ cardType }) => (
+const Card = ({ cardType, title, created, twitterName, articleUrl, content }) => (
   <StyledWrapper>
     <InnerWrapper activeColor={cardType}>
-      <StyledHeading>Hello react!</StyledHeading>
-      <DateInfo>3 days</DateInfo>
-      {cardType === 'people' && <StyledAvatar src={Image} />}
-      {cardType === 'article' && <StyledLinkButton href="https://szalanski.eu/prywatnie" />}
+      <StyledHeading>{title}</StyledHeading>
+      <DateInfo>{created}</DateInfo>
+      {cardType === 'people' && <StyledAvatar src={twitterName} />}
+      {cardType === 'article' && <StyledLinkButton href={articleUrl} />}
     </InnerWrapper>
     <InnerWrapper flex>
-      <ParagraphCard>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti error enim corporis
-        tempora praesentium dicta sequi quis hic eligendi illum in, officiis culpa quia fugit
-        molestias? Itaque doloribus praesentium fugiat! Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Corrupti error enim corporis tempora praesentium dicta sequi quis hic
-        eligendi illum in, officiis culpa quia fugit molestias? Itaque doloribus praesentium fugiat!
-      </ParagraphCard>
+      <ParagraphCard>{content}</ParagraphCard>
       <Button secondary>Remove</Button>
     </InnerWrapper>
   </StyledWrapper>
@@ -104,10 +98,17 @@ const Card = ({ cardType }) => (
 
 Card.propTypes = {
   cardType: PropTypes.oneOf(['note', 'people', 'article']),
+  title: PropTypes.string.isRequired,
+  created: PropTypes.string.isRequired,
+  twitterName: PropTypes.string,
+  articleUrl: PropTypes.string,
+  content: PropTypes.string.isRequired,
 };
 
 Card.defaultProps = {
   cardType: 'note',
+  twitterName: 'twitter',
+  articleUrl: 'https://szalanski.eu/',
 };
 
 export default Card;
