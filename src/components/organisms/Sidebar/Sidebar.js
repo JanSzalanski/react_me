@@ -16,7 +16,7 @@ const StyledWrapper = styled.nav`
   padding: 25px 0;
   width: 125px;
   height: 100vh;
-  background-color: ${({ activeColor, theme }) => (activeColor ? theme[activeColor] : theme.note)};
+  background-color: ${({ activeColor, theme }) => (activeColor ? theme[activeColor] : theme.news)};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -56,7 +56,7 @@ const Sidebar = ({ pageType }) => (
     <StyledLogoLink to="/" />
     <StyledLinksList>
       <li>
-        <ButtonIcon exact as={NavLink} to="/notes" icon={penIcon} activeclass="active" />
+        <ButtonIcon exact as={NavLink} to="/news" icon={penIcon} activeclass="active" />
       </li>
       <li>
         <ButtonIcon as={NavLink} to="/people" icon={peopleIcon} activeclass="active" secondary />

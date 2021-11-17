@@ -24,7 +24,7 @@ const InnerWrapper = styled.div`
   background-color: ${({ activeColor, theme }) =>
     activeColor ? theme[activeColor] : theme.maingrey};
   border-bottom: 2px solid
-    ${({ activeColor, theme }) => (activeColor ? theme[`${activeColor}Dark`] : theme.note)};
+    ${({ activeColor, theme }) => (activeColor ? theme[`${activeColor}Dark`] : theme.news)};
 
   :first-of-type {
     z-index: 1;
@@ -97,7 +97,7 @@ const Card = ({ cardType, title, created, twitterName, articleUrl, content }) =>
 );
 
 Card.propTypes = {
-  cardType: PropTypes.oneOf(['note', 'people', 'article']),
+  cardType: PropTypes.oneOf(['news', 'people', 'article']),
   title: PropTypes.string.isRequired,
   created: PropTypes.string.isRequired,
   twitterName: PropTypes.string,
@@ -106,7 +106,7 @@ Card.propTypes = {
 };
 
 Card.defaultProps = {
-  cardType: 'note',
+  cardType: 'news',
   twitterName: 'twitter',
   articleUrl: 'https://szalanski.eu/',
 };

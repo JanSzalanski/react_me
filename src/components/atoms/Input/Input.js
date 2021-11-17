@@ -19,7 +19,7 @@ const Input = styled.input`
   }
 
   :enabled {
-    border: 2px solid ${({ activeColor, theme }) => (activeColor ? theme[activeColor] : theme.note)};
+    border: 2px solid ${({ activeColor, theme }) => (activeColor ? theme[activeColor] : theme.news)};
     /* outline:  */
   }
   :checked {

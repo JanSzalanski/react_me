@@ -1,6 +1,6 @@
 export const theme = {
-  note: '#2bd8ff',
-  noteDark: '#0060df',
+  news: '#2bd8ff',
+  newsDark: '#0060df',
   people: '#ff2bd8',
   peopleDark: '#ce132c',
   article: '#ffd82b',

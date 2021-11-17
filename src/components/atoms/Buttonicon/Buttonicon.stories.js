@@ -15,7 +15,7 @@ const YellowBack = styled.div`
   align-items: center;
   width: 250px;
   height: 250px;
-  background-color: ${({ theme }) => theme.note};
+  background-color: ${({ theme }) => theme.news};
 `;
 storiesOf('Atoms/ButtonIcon', module)
   .addDecorator(story => <YellowBack>{story()}</YellowBack>)

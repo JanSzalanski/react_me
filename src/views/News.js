@@ -6,7 +6,7 @@ import Input from 'components/atoms/Input/Input';
 import Heading from 'components/atoms/Heading/Heading';
 import Paragraph from '../components/atoms/Paragraph/Paragraph';
 
-const notes = [
+const news = [
   {
     id: 1,
     title: 'Wake me up when Vue ends',
@@ -58,21 +58,21 @@ const StyledInput = styled(Input)`
   transform: translateY(-50%);
 `;
 
-const Notes = () => (
-  <PageTemplate pageType="note">
+const News = () => (
+  <PageTemplate pageType="news">
     <StyledPageHeader>
       <Heading big as="h1">
         O projekcie
       </Heading>
-      <Paragraph>6 notes</Paragraph>
-      <StyledInput required activeColor="note" search placeholder="search" />
+      <Paragraph>6 komunikatów</Paragraph>
+      <StyledInput required activeColor="news" search placeholder="search" />
     </StyledPageHeader>
     <StyledGridWrapper>
-      {notes.map(({ title, content, created, id }) => (
-        <Card cardType="note" title={title} content={content} created={created} key={id} />
+      {news.map(({ title, content, created, id }) => (
+        <Card cardType="news" title={title} content={content} created={created} key={id} />
       ))}
     </StyledGridWrapper>
   </PageTemplate>
 );
 
-export default Notes;
+export default News;
