@@ -11,12 +11,12 @@ const PageTemplate = ({ children, pageType }) => (
 );
 
 PageTemplate.propTypes = {
-  children: PropTypes.string.isRequired,
-  pageType: PropTypes.oneOf(['note', 'people', 'article']),
+  children: PropTypes.array.isRequired,
+  pageType: PropTypes.oneOf(['news', 'people', 'article']),
 };
 
 PageTemplate.defaultProps = {
-  pageType: 'note',
+  pageType: 'news',
 };
 
 export default PageTemplate;
