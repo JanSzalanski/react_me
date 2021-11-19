@@ -1,19 +1,23 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
-// import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import PageTemplate from './PageTemplate';
+import PropTypes from 'prop-types';
+// import styled from 'styled-components';
+import PageTemplate from 'templates/PageTemplate';
 
-const DetailsTemplates = () => (
-  <PageTemplate>
-    <h1>News</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis exercitationem repellendus,
-      dolores doloribus similique dolorem ullam hic, laudantium nam, totam dolor rem aliquid?
-      Nostrum ut, eligendi culpa laudantium nihil quis?
-    </p>
+const DetailsTemplate = ({ children, pageType }) => (
+  <PageTemplate pageType={pageType}>
+    {children}
     <Link to="/">powrót</Link>
   </PageTemplate>
 );
 
-export default DetailsTemplates;
+DetailsTemplate.propTypes = {
+  children: PropTypes.arrayOf(PropTypes.object).isRequired,
+  pageType: PropTypes.oneOf(['notice', 'person', 'article']),
+};
+
+DetailsTemplate.defaultProps = {
+  pageType: 'notice',
+};
+
+export default DetailsTemplate;

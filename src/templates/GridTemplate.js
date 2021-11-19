@@ -41,8 +41,8 @@ const GridTemplate = ({ children, pageType }) => (
 );
 
 GridTemplate.propTypes = {
-  children: PropTypes.array.isRequired,
-  pageType: PropTypes.oneOf(['news', 'people', 'article']),
+  children: PropTypes.arrayOf(PropTypes.object).isRequired,
+  pageType: PropTypes.oneOf(['news', 'people', 'articles']),
 };
 
 GridTemplate.defaultProps = {

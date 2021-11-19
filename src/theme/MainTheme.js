@@ -3,7 +3,7 @@ export const theme = {
   newsDark: '#0060df',
   people: '#ff2bd8',
   peopleDark: '#ce132c',
-  article: '#ffd82b',
+  articles: '#ffd82b',
   articleDark: '#ff9100',
   maingrey: '#373737',
   grey100: 'hsl(0,0%,75%)',

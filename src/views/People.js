@@ -45,6 +45,7 @@ const People = () => (
   <GridTemplate pageType="people">
     {peoples.map(({ title, content, twitterName, created, id }) => (
       <Card
+        id={id}
         cardType="people"
         title={title}
         content={content}

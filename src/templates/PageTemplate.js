@@ -11,8 +11,9 @@ const PageTemplate = ({ children, pageType }) => (
 );
 
 PageTemplate.propTypes = {
-  children: PropTypes.array.isRequired,
-  pageType: PropTypes.oneOf(['news', 'people', 'article']),
+  // eslint-disable-next-line react/require-default-props
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.node]),
+  pageType: PropTypes.oneOf(['news', 'people', 'articles']),
 };
 
 PageTemplate.defaultProps = {

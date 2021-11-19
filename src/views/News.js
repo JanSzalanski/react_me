@@ -36,7 +36,7 @@ const news = [
 const News = () => (
   <GridTemplate pageType="news">
     {news.map(({ title, content, created, id }) => (
-      <Card cardType="news" title={title} content={content} created={created} key={id} />
+      <Card id={id} cardType="news" title={title} content={content} created={created} key={id} />
     ))}
   </GridTemplate>
 );
