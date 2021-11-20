@@ -30,11 +30,25 @@ class DetailsPage extends Component {
   }
 
   render() {
+    const dummyArticle = {
+      id: 1,
+      title: 'Wake me upwhen Vue ends',
+      content:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi',
+      twitterName: 'Mirek Z',
+      articleUrl: 'https://szalanski.eu',
+      created: '2 day',
+    };
     const { pageType } = this.state;
 
     return (
-      <DetailsTemplates pageType={pageType}>
-        <p>{pageType}</p>
+      <DetailsTemplates>
+        pageType={pageType}
+        title={dummyArticle.title}
+        created={dummyArticle.created}
+        content={dummyArticle.content}
+        articleUrl={dummyArticle.articleUrl}
+        twitterName={dummyArticle.twitterName}
       </DetailsTemplates>
     );
   }
