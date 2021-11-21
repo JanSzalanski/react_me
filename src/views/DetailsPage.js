@@ -42,14 +42,14 @@ class DetailsPage extends Component {
     const { pageType } = this.state;
 
     return (
-      <DetailsTemplates>
+      <DetailsTemplates
         pageType={pageType}
         title={dummyArticle.title}
         created={dummyArticle.created}
         content={dummyArticle.content}
         articleUrl={dummyArticle.articleUrl}
         twitterName={dummyArticle.twitterName}
-      </DetailsTemplates>
+      />
     );
   }
 }
