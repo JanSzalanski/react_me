@@ -34,7 +34,7 @@ class DetailsPage extends Component {
       id: 1,
       title: 'Wake me upwhen Vue ends',
       content:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi',
       twitterName: 'Mirek Z',
       articleUrl: 'https://szalanski.eu',
       created: '2 day',

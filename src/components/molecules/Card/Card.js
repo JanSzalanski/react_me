@@ -47,6 +47,7 @@ const DateInfo = styled(Paragraph)`
   margin: 0 0 5px;
   font-weight: ${({ theme }) => theme.bold};
   font-size: ${({ theme }) => theme.fontSize.xs};
+  color: black;
 `;
 
 const ParagraphCard = styled(Paragraph)`
