@@ -1,49 +1,13 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
-import image1 from 'assets/img/img.jpg';
-import image2 from 'assets/img/img2.jpg';
-import image3 from 'assets/img/img3.jpg';
-import image4 from 'assets/img/img4.jpg';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import GridTemplate from 'templates/GridTemplate';
 import Card from 'components/molecules/Card/Card';
 
-const peoples = [
-  {
-    id: 1,
-    title: 'Mirek',
-    content:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi',
-    created: '1 day',
-    twitterName: image1,
-  },
-  {
-    id: 2,
-    title: 'Bartek',
-    content:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi',
-    created: '1 day',
-    twitterName: image2,
-  },
-  {
-    id: 3,
-    title: 'Romek',
-    content:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi',
-    created: '5 days',
-    twitterName: image3,
-  },
-  {
-    id: 4,
-    title: 'Piotr',
-    content:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi',
-    created: '10 days',
-    twitterName: image4,
-  },
-];
-
-const People = () => (
+const People = ({ people }) => (
   <GridTemplate pageType="people">
-    {peoples.map(({ title, content, twitterName, created, id }) => (
+    {people.map(({ title, content, twitterName, created, id }) => (
       <Card
         id={id}
         cardType="people"
@@ -57,4 +21,24 @@ const People = () => (
   </GridTemplate>
 );
 
-export default People;
+People.propTypes = {
+  people: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    cardType: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
+    twitterName: PropTypes.string.isRequired,
+    created: PropTypes.string.isRequired,
+  }),
+};
+
+People.defaultProps = {
+  people: {},
+};
+
+const mapStateToProps = state => {
+  const { people } = state;
+  return { people };
+};
+
+export default connect(mapStateToProps)(People);

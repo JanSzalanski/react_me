@@ -118,7 +118,7 @@ class Card extends Component {
 }
 
 Card.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   cardType: PropTypes.oneOf(['news', 'people', 'articles']),
   title: PropTypes.string.isRequired,
   created: PropTypes.string.isRequired,
@@ -129,8 +129,8 @@ Card.propTypes = {
 
 Card.defaultProps = {
   cardType: 'news',
-  twitterName: 'twitter',
-  articleUrl: 'https://szalanski.eu/',
+  twitterName: null,
+  articleUrl: null,
 };
 
 export default Card;

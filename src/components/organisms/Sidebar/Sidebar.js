@@ -59,7 +59,7 @@ const Sidebar = ({ pageType }) => (
         <ButtonIcon as={NavLink} to="/news" icon={penIcon} activeclass="active" />
       </li>
       <li>
-        <ButtonIcon as={NavLink} to="/people" icon={peopleIcon} activeclass="active" secondary />
+        <ButtonIcon as={NavLink} to="/people" icon={peopleIcon} activeclass="active" />
       </li>
       <li>
         <ButtonIcon as={NavLink} to="/articles" icon={bulbIcon} activeclass="active" />

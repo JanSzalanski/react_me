@@ -8,7 +8,7 @@ const ButtonIcon = styled.button`
   background-image: url(${({ icon }) => icon});
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: ${props => (props.secondary ? '65%' : '40%')}; //dość prostackie ?
+  background-size: 50% 50%; //dość prostackie ?
   border: none;
   background-color: ${({ active }) => (active ? 'white' : 'transparent')};
 

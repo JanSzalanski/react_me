@@ -6,11 +6,16 @@ import Input from 'components/atoms/Input/Input';
 import Heading from 'components/atoms/Heading/Heading';
 import Paragraph from 'components/atoms/Paragraph/Paragraph';
 
-const StyledPageHeader = styled.h1`
-  display: block;
-  position: relative;
-  color: ${({ theme }) => theme.white};
-  padding: 25px 0;
+const StyledPageHeader = styled.div`
+  margin: 25px 0 50px 0;
+`;
+
+const StyledHeading = styled(Heading)`
+  margin: 25px 0 0 0;
+
+  ::first-letter {
+    text-transform: uppercase;
+  }
 `;
 
 const StyledGridWrapper = styled.div`
@@ -30,9 +35,9 @@ const StyledInput = styled(Input)`
 const GridTemplate = ({ children, pageType }) => (
   <PageTemplate pageType={pageType}>
     <StyledPageHeader>
-      <Heading big as="h1">
+      <StyledHeading big as="h1">
         {pageType}
-      </Heading>
+      </StyledHeading>
       <Paragraph>6 {pageType}</Paragraph>
       <StyledInput required activeColor={pageType} search placeholder="search" />
     </StyledPageHeader>

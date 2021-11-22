@@ -4,7 +4,7 @@ export const theme = {
   people: '#ff2bd8',
   peopleDark: '#ce132c',
   articles: '#ffd82b',
-  articleDark: '#ff9100',
+  articlesDark: '#ff9100',
   maingrey: '#373737',
   grey100: 'hsl(0,0%,75%)',
   grey200: 'hsl(0,0%,60%)',
