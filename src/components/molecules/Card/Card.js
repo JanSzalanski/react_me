@@ -51,6 +51,7 @@ const DateInfo = styled(Paragraph)`
 `;
 
 const ParagraphCard = styled(Paragraph)`
+  padding-top: 10px;
   color: white;
 `;
 
@@ -62,10 +63,10 @@ const StyledHeading = styled(Heading)`
 const StyledAvatar = styled.img`
   width: 86px;
   height: 86px;
-  border: 7px solid ${({ theme }) => theme.maingrey};
+  border: 5px solid ${({ theme }) => theme.maingrey};
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 25px;
+  top: 25px;
   border-radius: 50px;
 `;
 

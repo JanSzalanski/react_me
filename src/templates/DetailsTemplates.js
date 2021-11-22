@@ -36,6 +36,10 @@ const StyledParagraph = styled(Paragraph)`
   font-weight: ${({ theme }) => theme.bold};
 `;
 
+const ParagraphDetail = styled(Paragraph)`
+  padding-bottom: 25px;
+`;
+
 const StyledLink = styled.a`
   display: block;
   font-weight: ${({ theme }) => theme.bold};
@@ -63,7 +67,7 @@ const DetailsTemplate = ({ pageType, title, created, content, articleUrl }) => (
         </StyledHeading>
         <StyledParagraph>{created}</StyledParagraph>
       </StyledPageHeader>
-      <Paragraph>{content}</Paragraph>
+      <ParagraphDetail>{content}</ParagraphDetail>
       {pageType === 'articles' && <StyledLink href={articleUrl}>Otwórz artykół</StyledLink>}
       {pageType === 'people' && <StyledImage alt={title} src={`${image2}`} />}
       <Button as={Link} to={`/${pageType}`} activeColor={pageType}>
