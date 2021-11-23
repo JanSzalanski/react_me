@@ -7,6 +7,7 @@ import Heading from 'components/atoms/Heading/Heading';
 import Paragraph from 'components/atoms/Paragraph/Paragraph';
 
 const StyledPageHeader = styled.div`
+  position: relative;
   margin: 25px 0 50px 0;
 `;
 

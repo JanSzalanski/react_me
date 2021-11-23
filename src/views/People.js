@@ -33,7 +33,7 @@ People.propTypes = {
 };
 
 People.defaultProps = {
-  people: {},
+  people: [],
 };
 
 const mapStateToProps = state => {

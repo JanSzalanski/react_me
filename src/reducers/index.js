@@ -42,10 +42,18 @@ const initialState = {
   articles: [
     {
       id: 1,
-      title: 'React on my mind',
+      title: 'React on my mind2',
       content:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi',
       articleUrl: 'https://szalanski.eu',
+      created: '1 day',
+    },
+    {
+      id: 2,
+      title: 'Wish you React',
+      content:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi',
+      articleUrl: 'https://szalanski.eu/praktyka.php',
       created: '1 day',
     },
   ],
@@ -56,6 +64,20 @@ const initialState = {
       content:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi',
       created: '1 day',
+    },
+    {
+      id: 2,
+      title: 'Como es An Gular?',
+      content:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi',
+      created: '1 day',
+    },
+    {
+      id: 3,
+      title: 'Du bist Reactish',
+      content:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi',
+      created: '5 days',
     },
   ],
 };
