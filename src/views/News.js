@@ -14,13 +14,15 @@ const News = ({ news }) => (
 );
 
 News.propTypes = {
-  news: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    cardType: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    content: PropTypes.string.isRequired,
-    created: PropTypes.string.isRequired,
-  }),
+  news: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      cardType: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      content: PropTypes.string.isRequired,
+      created: PropTypes.string.isRequired,
+    }),
+  ),
 };
 
 News.defaultProps = {

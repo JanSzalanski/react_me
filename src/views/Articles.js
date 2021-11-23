@@ -22,18 +22,20 @@ const Articles = ({ articles }) => (
 );
 
 Articles.propTypes = {
-  articles: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    cardType: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    content: PropTypes.string.isRequired,
-    articleUrl: PropTypes.string.isRequired,
-    created: PropTypes.string.isRequired,
-  }),
+  articles: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      cardType: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      content: PropTypes.string.isRequired,
+      articleUrl: PropTypes.string.isRequired,
+      created: PropTypes.string.isRequired,
+    }),
+  ),
 };
 
 Articles.defaultProps = {
-  articles: [],
+  articles: [null, null, null, null, null, null],
 };
 
 const mapStateToProps = state => {
