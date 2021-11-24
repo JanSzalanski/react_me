@@ -42,7 +42,7 @@ const initialState = {
   articles: [
     {
       id: 1,
-      title: 'React on my mind2',
+      title: 'React on my mind',
       content:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi',
       articleUrl: 'https://szalanski.eu',
@@ -84,7 +84,17 @@ const initialState = {
 
 // eslint-disable-next-line no-unused-vars
 const rootReducer = (state = initialState, action) => {
-  return state;
+  switch (action.type) {
+    case 'REMOVE_ITEM':
+      return {
+        ...state,
+        [action.payload.itemType]: [
+          ...state[action.payload.itemType].filter(item => item.id !== action.payload.id),
+        ],
+      };
+    default:
+      return state;
+  }
 };
 
 export default rootReducer;
