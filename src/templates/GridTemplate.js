@@ -5,6 +5,7 @@ import PageTemplate from 'templates/PageTemplate';
 import Input from 'components/atoms/Input/Input';
 import Heading from 'components/atoms/Heading/Heading';
 import Paragraph from 'components/atoms/Paragraph/Paragraph';
+import withContext from '../hoc/withContext';
 
 const StyledPageHeader = styled.div`
   position: relative;
@@ -33,14 +34,14 @@ const StyledInput = styled(Input)`
   transform: translateY(-50%);
 `;
 
-const GridTemplate = ({ children, pageType }) => (
-  <PageTemplate pageType={pageType}>
+const GridTemplate = ({ children, pageContext }) => (
+  <PageTemplate>
     <StyledPageHeader>
       <StyledHeading big as="h1">
-        {pageType}
+        {pageContext}
       </StyledHeading>
-      <Paragraph>6 {pageType}</Paragraph>
-      <StyledInput required activeColor={pageType} search placeholder="search" />
+      <Paragraph>6 {pageContext}</Paragraph>
+      <StyledInput required activeColor={pageContext} search placeholder="search" />
     </StyledPageHeader>
     <StyledGridWrapper>{children}</StyledGridWrapper>
   </PageTemplate>
@@ -48,11 +49,11 @@ const GridTemplate = ({ children, pageType }) => (
 
 GridTemplate.propTypes = {
   children: PropTypes.arrayOf(PropTypes.object).isRequired,
-  pageType: PropTypes.oneOf(['news', 'people', 'articles']),
+  pageContext: PropTypes.oneOf(['news', 'people', 'articles']),
 };
 
 GridTemplate.defaultProps = {
-  pageType: 'news',
+  pageContext: 'news',
 };
 
-export default GridTemplate;
+export default withContext(GridTemplate);

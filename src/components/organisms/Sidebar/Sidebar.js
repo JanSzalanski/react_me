@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import ButtonIcon from 'components/atoms/ButtonIcon/ButtonIcon';
+import withContext from 'hoc/withContext';
 import bulbIcon from 'assets/icons/bulb.svg';
 import logoutIcon from 'assets/icons/logout.svg';
 import penIcon from 'assets/icons/pen.svg';
@@ -51,8 +52,8 @@ const StyledLinksList = styled.ul`
   list-style: none;
 `;
 
-const Sidebar = ({ pageType }) => (
-  <StyledWrapper activeColor={pageType}>
+const Sidebar = ({ pageContext }) => (
+  <StyledWrapper activeColor={pageContext}>
     <StyledLogoLink to="/" />
     <StyledLinksList>
       <li>
@@ -70,11 +71,11 @@ const Sidebar = ({ pageType }) => (
 );
 
 Sidebar.propTypes = {
-  pageType: PropTypes.oneOf(['news', 'people', 'articles']),
+  pageContext: PropTypes.oneOf(['news', 'people', 'articles']),
 };
 
 Sidebar.defaultProps = {
-  pageType: 'news',
+  pageContext: 'news',
 };
 
-export default Sidebar;
+export default withContext(Sidebar);
