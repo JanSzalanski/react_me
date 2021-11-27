@@ -122,9 +122,11 @@ class Card extends Component {
         </InnerWrapper>
         <InnerWrapper flex>
           <ParagraphCard>{content}</ParagraphCard>
-          <Button onClick={() => removeItem(pageContext, id)} secondary>
-            Remove
-          </Button>
+          {pageContext === 'news' && (
+            <Button onClick={() => removeItem(pageContext, id)} secondary>
+              Hide
+            </Button>
+          )}
         </InnerWrapper>
       </StyledWrapper>
     );

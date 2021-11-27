@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import ButtonIcon from 'components/atoms/ButtonIcon/Buttonicon';
+import ButtonIcon from 'components/atoms/ButtonIcon/ButtonIcon';
 import withContext from 'hoc/withContext';
 import bulbIcon from 'assets/icons/bulb.svg';
 import logoutIcon from 'assets/icons/logout.svg';
