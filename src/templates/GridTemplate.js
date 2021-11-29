@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import PageTemplate from 'templates/PageTemplate';
@@ -52,22 +52,42 @@ const StyledButtonIcon = styled(ButtonIcon)`
   z-index: 2;
 `;
 
-const GridTemplate = ({ children, pageContext }) => (
-  <PageTemplate>
-    <StyledWrapper>
-      <StyledPageHeader>
-        <StyledHeading big as="h1">
-          {pageContext}
-        </StyledHeading>
-        <Paragraph>6 {pageContext}</Paragraph>
-        <StyledInput required activeColor={pageContext} search placeholder="search" />
-      </StyledPageHeader>
-      <StyledGridWrapper>{children}</StyledGridWrapper>
-      <StyledButtonIcon icon={plusIcon} activeColor={pageContext} />
-      <ContactBar />
-    </StyledWrapper>
-  </PageTemplate>
-);
+class GridTemplate extends Component {
+  state = {
+    isContactBarVisible: false,
+  };
+
+  handleContactBarToggle = () => {
+    this.setState(prevState => ({
+      isContactBarVisible: !prevState.isContactBarVisible,
+    }));
+  };
+
+  render() {
+    const { children, pageContext } = this.props;
+    const { isContactBarVisible } = this.state;
+    return (
+      <PageTemplate>
+        <StyledWrapper>
+          <StyledPageHeader>
+            <StyledHeading big as="h1">
+              {pageContext}
+            </StyledHeading>
+            <Paragraph>6 {pageContext}</Paragraph>
+            <StyledInput required activeColor={pageContext} search placeholder="search" />
+          </StyledPageHeader>
+          <StyledGridWrapper>{children}</StyledGridWrapper>
+          <StyledButtonIcon
+            icon={plusIcon}
+            activeColor={pageContext}
+            onClick={this.handleContactBarToggle}
+          />
+          <ContactBar isVisible={isContactBarVisible} />
+        </StyledWrapper>
+      </PageTemplate>
+    );
+  }
+}
 
 GridTemplate.propTypes = {
   children: PropTypes.arrayOf(PropTypes.object).isRequired,
