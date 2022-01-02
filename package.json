@@ -1,7 +1,7 @@
 {
-  "homepage": "https://janszalanski.github.io/react_me",
   "name": "01",
   "version": "0.1.0",
+  "homepage": "https://janszalanski.github.io/react_me",
   "private": true,
   "dependencies": {
     "@storybook/addon-knobs": "^6.3.1",
